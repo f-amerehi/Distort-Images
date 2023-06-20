@@ -1,5 +1,6 @@
 #!/usr/bin/env python
 
+from pathlib import Path
 from skimage.color import rgb2gray
 from scipy.ndimage import gaussian_filter
 from scipy import fftpack as fp
@@ -507,3 +508,16 @@ def equalise_power_spectrum(image, avg_power_spectrum):
 
     # return stacked (RGB) grey image
     return(np.dstack((new_channel, new_channel, new_channel)))
+
+dirname = Path(__file__).parent
+
+def load_x_gamma_function():
+    path = dirname / 'x_gamma_function.npy'
+    x_gamma_function = np.load(str(path))
+    return x_gamma_function
+
+
+def load_avg_power_spectrum():
+    path = dirname / 'mean_power_spectrum_grey.npy'
+    avg_power_spectrum = np.load(str(path))
+    return avg_power_spectrum
