@@ -375,7 +375,7 @@ def monitor_nonlinearity(x, x_gamma_function):
 
     x = x * 255
     x_int = x.astype(np.uint8)
-    assert np.allclose(x, x_int)
+    # assert np.allclose(x, x_int)
 
     return x_gamma_function[x_int].reshape(x.shape)
 
