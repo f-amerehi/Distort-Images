@@ -306,7 +306,7 @@ def eidolon_partially_coherent_disarray(image, reach, coherence, grain):
     """
 
     # import here to make other code not dependent on eidolon package
-    import wrapper as wr
+    from distort_images import wrapper as wr
     return wr.partially_coherent_disarray(wr.data_to_pic(image),
                                           reach, coherence, grain)
 
