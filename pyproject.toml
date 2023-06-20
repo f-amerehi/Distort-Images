@@ -1,0 +1,25 @@
+[build-system]
+requires = ["flit_core >=3.2,<4"]
+build-backend = "flit_core.buildapi"
+
+[project]
+name = "distort_images"
+version = "0.0.1"
+description = "Data, code & materials from the paper \"Generalisation in humans and deep neural networks\" (NeurIPS 2018)"
+readme = "README.md"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+]
+requires-python = ">=3.0"
+dependencies = [
+    "numpy>=1.24.3,<2",
+    "Pillow>=9.5.0,<10",
+    "scipy>=1.10.1,<2",
+    "scikit-image>=0.0,<1",
+    "eidolon@git+https://github.com/f-amerehi/Eidolon.git"
+]
+
+[project.urls]
+"Homepage" = "https://github.com/f-amerehi/Distort-Images"
+"Bug Tracker" = "https://github.com/f-amerehi/Distort-Images/issues"
